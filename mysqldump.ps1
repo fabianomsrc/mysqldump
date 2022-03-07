@@ -6,7 +6,7 @@
 .DESCRIPTION
     Faz o backup automático da(s) Base(s) de Dados do sistema e salva nos diretórios especificados.
 .EXAMPLE
-    PS C:\> powershell -ExecutionPolicy Bypass -WindowStyle Hidden -File C:\Backups\BIN\mysqldump.ps1
+    PS C:\> powershell -ExecutionPolicy Bypass -NoProfile -NonInteractive -NoLogo -WindowStyle Hidden -File C:\Backups\BIN\mysqldump.ps1
 .NOTES
     Copyright (c) Fabiano M. Silva
 #>
