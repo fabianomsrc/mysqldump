@@ -12,7 +12,7 @@
 #>
 
 # Nome da empresa. Evitar nomes com acentuação
-$nomeEmpresa = 'Serra Dourada'
+$nomeEmpresa = 'Nome da Empresa'
 
 # Substitui espaços em branco por underscores
 $nomeEmpresa = $nomeEmpresa.Replace(' ', '_')
@@ -42,8 +42,11 @@ $keepFilesForXDays = 7
 #>
 $mysqlBaseDirectory = 'C:\wamp\bin\mysql\mysql5.7.37'
 $sqlBackupDirectory = 'C:\Backups'
-$zipBackupDirectory = "C:\Backups\GDrive\Bkp_MySQL_$($nomeEmpresa)\$($currentYearMonth)"
+$zipBackupDirectory = 'C:\Backups\GDrive'
 $mysqldumpLogError  = 'C:\Backups\mysqldump.log'
+
+# Cria um diretório com a estrutura de ano e mês para separar os arquivos. ex.: Bkp_MySQL_Nome_da_Empresa\202203
+$zipBackupDirectory = Join-Path -Path $zipBackupDirectory -ChildPath "Bkp_MySQL_$($nomeEmpresa)\$($currentYearMonth)"
 
 <#
 .SYNOPSIS
